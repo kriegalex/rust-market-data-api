@@ -1,0 +1,22 @@
+[package]
+name = "rust-async-project"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["trace"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+metrics = "0.24"
+metrics-exporter-prometheus = "0.16"
+thiserror = "2"
+rust_decimal = { version = "1", features = ["serde-str", "macros"] }
+rust_decimal_macros = "1"
+
+[dev-dependencies]
+axum-test = "17"
